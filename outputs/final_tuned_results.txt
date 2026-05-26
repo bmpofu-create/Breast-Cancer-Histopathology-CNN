@@ -1,0 +1,26 @@
+Final Tuned CNN Results
+
+Learning Rate: 0.0005
+Weight Decay: 1e-4
+Dropout: 0.3
+
+Accuracy: 80.53%
+Precision: 87.34%
+Recall: 86.29%
+Weighted F1: 80.64%
+
+Classification Report
+
+Benign:
+Precision: 0.62
+Recall: 0.64
+F1: 0.63
+
+Malignant:
+Precision: 0.87
+Recall: 0.86
+F1: 0.87
+
+Confusion Matrix:
+[[222 125]
+ [137 862]]

@@ -17,7 +17,7 @@ from model import BaselineCNN
 print("Starting evaluation...")
 
 CSV_PATH = "outputs/breakhis_metadata_splits.csv"
-MODEL_PATH = "models/baseline_cnn_17052026.pth"
+MODEL_PATH="models/final_tuned_cnn.pth"
 BATCH_SIZE = 16
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
