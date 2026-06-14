@@ -1,0 +1,5 @@
+magnification,binary_accuracy,subtype_accuracy
+40X,98.3306,89.8164
+100X,95.5200,85.7600
+200X,94.7020,83.1126
+400X,94.1392,81.5018
