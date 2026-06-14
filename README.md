@@ -1,6 +1,4 @@
-Here is a complete, professional `README.md` file tailored specifically to your script's architecture. It outlines the technology stack (PLIP foundation model), data structure expectations, and how to execute the evaluation and interactive testing pipelines.
 
----
 
 # Breast Cancer Histopathology Classification using PLIP
 
