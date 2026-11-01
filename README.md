@@ -1,153 +1,87 @@
-# Breast Cancer Histopathology Classification Using CNN
+# Breast histopathology classification
 
-This project investigates binary breast cancer classification using the BreaKHis dataset using Convolutional Neural Networks (CNNs).
+Patient-separated experiments on BreaKHis and BRACS, plus a small app that classifies one region into the seven BRACS subtypes.
 
-## Objective
+The datasets and trained weights are not in this repository. Download them separately and keep them in the folders named below.
 
-Develop and evaluate CNN-based methods for classifying breast histopathology images into:
-
-- Benign
-- Malignant
-
-The study explores:
-
-- Patient-wise splitting
-- Class balancing
-- Threshold adjustment
-- Precision–recall tradeoffs
-- Hyperparameter tuning
-
-## Dataset
-
-BreaKHis Dataset
-
-- 7,909 images
-- 81 patient IDs extracted
-- Magnifications:
-  - 40X
-  - 100X
-  - 200X
-  - 400X
-
-Patient-wise splitting was used to prevent data leakage.
-
-## Baseline CNN Results
-
-| Metric | Score |
-|----------|--------|
-| Accuracy | 85.29% |
-| Precision | 93.30% |
-| Recall | 86.39% |
-| Weighted F1 | 85.72% |
-
-## Threshold Experiment Results
-
-| Threshold | Accuracy | Precision | Recall | Weighted F1 |
-|------------|-----------|-----------|----------|-------------|
-| 0.3 | 81.87% | 82.91% | 95.20% | 80.04% |
-| 0.4 | 78.45% | 84.59% | 86.79% | 78.17% |
-| 0.5 | 73.18% | 87.71% | 74.27% | 74.49% |
-| 0.6 | 69.99% | 94.07% | 63.56% | 71.86% |
-| 0.7 | 65.38% | 94.64% | 56.56% | 67.37% |
-
-## Hyperparameter Tuning Experiments
-
-### Learning Rate Results
-
-| Learning Rate | Best Validation Accuracy |
-|---------------|--------------------------|
-| 0.001 | 81.16% |
-| 0.0005 | 86.75% |
-| 0.0001 | 85.45% |
-
-Best learning rate:
+## Layout
 
 ```text
-0.0005
+app.py                          Streamlit classifier
+src/multiclass_classify.py      7-class PLIP adapter used by the app
+experiments/
+  01_cnn_baseline/              BreaKHis benign/malignant CNN and tuning runs
+  02_breakhis_plip_binary/      PLIP binary adapter, cosine 1-NN, and an early image-level run
+  03_breakhis_plip_subtypes/    PLIP subtype runs, including patient-level 1-NN
+  04_bracs_3class/              BRACS benign / atypical / malignant
+  05_bracs_7class/              BRACS seven-subtype adapter and 1-NN
+  06_retrieval/                 Retrieval experiments that call an external API
 ```
 
----
+Each experiment folder has a `results/` directory with the report from that test.
 
-### L2 Regularization (Weight Decay)
+On the seven-subtype task, the PLIP adapter separated these three classes best:
 
-| Weight Decay | Best Validation Accuracy |
-|--------------|--------------------------|
-| 0 | 85.73% |
-| 1e-5 | 85.07% |
-| 1e-4 | 85.82% |
-| 1e-3 | 84.89% |
+| Subtype | Patient-isolated F1 |
+|---|---:|
+| Invasive carcinoma | 0.90 |
+| Flat epithelial atypia | 0.74 |
+| Ductal carcinoma in situ | 0.73 |
 
-Best:
+That run is `experiments/05_bracs_7class`. Its patient-isolated accuracy was 65.19%, ahead of cosine nearest-neighbor at 55.31%.
+
+## Data
+
+Place the extracted datasets here:
 
 ```text
-1e-4
+BreaKHis_v1/BreaKHis_v1/
+BRACS_ROI/
 ```
 
----
+BreaKHis images used for these runs: https://drive.google.com/drive/folders/1RjDOnK1qugoRBA66FzTfDt8gPpUGQoFz?usp=sharing
 
-### Dropout Experiments
+BRACS ROI is the public BRACS region-of-interest release. The metadata tables in `experiments/01_cnn_baseline/results/` store image paths relative to `BreaKHis_v1/BreaKHis_v1/`.
 
-| Dropout | Best Validation Accuracy |
-|----------|--------------------------|
-| 0.3 | 86.75% |
-| 0.5 | 81.72% |
-| 0.7 | 84.70% |
+## Setup
 
-Best:
-
-```text
-0.3
+```bash
+pip install -r requirements.txt
 ```
 
----
+The retrieval scripts also need:
 
-### Final Tuned Model
-
-Parameters:
-
-```text
-Learning Rate = 0.0005
-Weight Decay = 1e-4
-Dropout = 0.3
+```bash
+pip install -r requirements-retrieval.txt
 ```
 
-Test Results:
-
-| Metric | Value |
-|----------|--------|
-| Accuracy | 80.53% |
-| Precision | 87.34% |
-| Recall | 86.29% |
-| Weighted F1 | 80.64% |
-
-Observation:
-
-Hyperparameter tuning and regularization did not outperform the original baseline CNN and reduced benign classification performance.
-
-## Project Structure
-
-```text
-src/
-models/
-outputs/
-```
+Copy `.env.example` to `.env` and add an API key before running `experiments/06_retrieval`. The real `.env` is ignored by git.
 
 ## Run
 
-Train:
+CNN baseline, from the repository root:
 
 ```bash
-python src/train_baseline.py
+python experiments/01_cnn_baseline/train_baseline.py
 ```
 
-Evaluate:
+BRACS 7-class experiment:
 
 ```bash
-python src/evaluate_baseline.py
+python experiments/05_bracs_7class/BRACS_ROI_7_CLASS.py
 ```
 
-Threshold experiment:
+Train the app model, then open the classifier:
 
 ```bash
-python src/threshold_experiment.py
+python src/multiclass_classify.py --train
+streamlit run app.py
 ```
+
+Classify one image from the command line:
+
+```bash
+python src/multiclass_classify.py --image path\to\image.png
+```
+
+The app is a research demo. It is not a diagnostic device.

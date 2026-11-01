@@ -1,0 +1,76 @@
+============================================================
+[40X] Detailed Subtype Classification Report
+============================================================
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.48      0.45      0.46        29
+   DUCTAL_CARCINOMA       0.56      0.55      0.55       242
+       FIBROADENOMA       0.02      0.01      0.01        86
+  LOBULAR_CARCINOMA       0.00      0.00      0.00        32
+ MUCINOUS_CARCINOMA       0.20      0.15      0.17        59
+PAPILLARY_CARCINOMA       0.09      0.11      0.10        38
+    PHYLLODES_TUMOR       0.00      0.00      0.00        38
+    TUBULAR_ADENOMA       0.45      0.45      0.45        31
+
+           accuracy                           0.31       555
+          macro avg       0.22      0.21      0.22       555
+       weighted avg       0.32      0.31      0.32       555
+
+
+============================================================
+[100X] Detailed Subtype Classification Report
+============================================================
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.51      0.67      0.58        30
+   DUCTAL_CARCINOMA       0.66      0.60      0.63       246
+       FIBROADENOMA       0.04      0.04      0.04        79
+  LOBULAR_CARCINOMA       0.00      0.00      0.00        33
+ MUCINOUS_CARCINOMA       0.00      0.00      0.00        57
+PAPILLARY_CARCINOMA       0.12      0.16      0.14        37
+    PHYLLODES_TUMOR       0.00      0.00      0.00        39
+    TUBULAR_ADENOMA       0.23      0.19      0.21        32
+
+           accuracy                           0.33       553
+          macro avg       0.20      0.21      0.20       553
+       weighted avg       0.35      0.33      0.34       553
+
+
+============================================================
+[200X] Detailed Subtype Classification Report
+============================================================
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.33      0.41      0.36        32
+   DUCTAL_CARCINOMA       0.62      0.59      0.61       239
+       FIBROADENOMA       0.08      0.07      0.07        84
+  LOBULAR_CARCINOMA       0.00      0.00      0.00        32
+ MUCINOUS_CARCINOMA       0.20      0.15      0.17        53
+PAPILLARY_CARCINOMA       0.07      0.06      0.07        33
+    PHYLLODES_TUMOR       0.00      0.00      0.00        42
+    TUBULAR_ADENOMA       0.86      0.32      0.46        38
+
+           accuracy                           0.33       553
+          macro avg       0.27      0.20      0.22       553
+       weighted avg       0.38      0.33      0.35       553
+
+
+============================================================
+[400X] Detailed Subtype Classification Report
+============================================================
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.20      0.33      0.25        30
+   DUCTAL_CARCINOMA       0.66      0.68      0.67       211
+       FIBROADENOMA       0.06      0.04      0.05        77
+  LOBULAR_CARCINOMA       0.00      0.00      0.00        26
+ MUCINOUS_CARCINOMA       0.32      0.15      0.20        55
+PAPILLARY_CARCINOMA       0.05      0.04      0.04        28
+    PHYLLODES_TUMOR       0.01      0.03      0.02        39
+    TUBULAR_ADENOMA       0.29      0.24      0.26        29
+
+           accuracy                           0.35       495
+          macro avg       0.20      0.19      0.19       495
+       weighted avg       0.36      0.35      0.35       495
+
+

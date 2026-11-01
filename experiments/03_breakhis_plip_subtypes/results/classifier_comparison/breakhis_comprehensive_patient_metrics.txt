@@ -1,0 +1,284 @@
+=========================================================================
+       BreaKHis Multi-Classifier Strict Patient-Level Verification       
+=========================================================================
+
+
+================================================================================
+MAGNIFICATION LEVEL: 40X
+================================================================================
+Cohort Split Details: Unique Patients Total = 82 | Train = 57 | Test = 25
+
+--- Classifier: Cosine Similarity ---
+  └─ Binary Accuracy   : 88.00%
+  └─ Subtype Accuracy  : 64.00%
+  └─ Macro Precision   : 0.2833
+  └─ Macro Recall      : 0.2917
+  └─ Macro F1-Score    : 0.2562
+  └─ Patient Confusion Matrix:
+[[ 0  0  1  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  0  3  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  1  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  1]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Logistic Regression ---
+  └─ Binary Accuracy   : 80.00%
+  └─ Subtype Accuracy  : 60.00%
+  └─ Macro Precision   : 0.3182
+  └─ Macro Recall      : 0.2708
+  └─ Macro F1-Score    : 0.2716
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  2  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  0  0  0  1  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Linear SVM ---
+  └─ Binary Accuracy   : 76.00%
+  └─ Subtype Accuracy  : 56.00%
+  └─ Macro Precision   : 0.3182
+  └─ Macro Recall      : 0.2292
+  └─ Macro F1-Score    : 0.2341
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  1  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  0  0  0  1  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Small MLP Classifier ---
+  └─ Binary Accuracy   : 80.00%
+  └─ Subtype Accuracy  : 52.00%
+  └─ Macro Precision   : 0.2059
+  └─ Macro Recall      : 0.1979
+  └─ Macro F1-Score    : 0.1948
+  └─ Patient Confusion Matrix:
+[[ 0  0  0  0  0  0  0  1]
+ [ 0 11  0  0  0  1  0  0]
+ [ 0  1  1  0  0  0  1  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  0  1  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  1]
+ [ 0  2  0  0  0  0  0  0]]
+
+
+================================================================================
+MAGNIFICATION LEVEL: 100X
+================================================================================
+Cohort Split Details: Unique Patients Total = 82 | Train = 57 | Test = 25
+
+--- Classifier: Cosine Similarity ---
+  └─ Binary Accuracy   : 84.00%
+  └─ Subtype Accuracy  : 60.00%
+  └─ Macro Precision   : 0.3984
+  └─ Macro Recall      : 0.3021
+  └─ Macro F1-Score    : 0.3315
+  └─ Patient Confusion Matrix:
+[[ 0  0  0  0  0  0  0  1]
+ [ 0 11  0  1  0  0  0  0]
+ [ 1  0  2  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  0  0  0  1  1  0  0]
+ [ 0  0  0  0  0  0  0  1]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Logistic Regression ---
+  └─ Binary Accuracy   : 84.00%
+  └─ Subtype Accuracy  : 60.00%
+  └─ Macro Precision   : 0.2798
+  └─ Macro Recall      : 0.2708
+  └─ Macro F1-Score    : 0.2576
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  2  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  0  0  0  1  0  0]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Linear SVM ---
+  └─ Binary Accuracy   : 84.00%
+  └─ Subtype Accuracy  : 56.00%
+  └─ Macro Precision   : 0.1515
+  └─ Macro Recall      : 0.2083
+  └─ Macro F1-Score    : 0.1716
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  2  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Small MLP Classifier ---
+  └─ Binary Accuracy   : 76.00%
+  └─ Subtype Accuracy  : 44.00%
+  └─ Macro Precision   : 0.1845
+  └─ Macro Recall      : 0.2292
+  └─ Macro F1-Score    : 0.1944
+  └─ Patient Confusion Matrix:
+[[0 0 0 0 0 0 0 1]
+ [0 8 0 1 0 3 0 0]
+ [0 0 2 0 0 1 0 0]
+ [0 1 0 0 0 0 0 0]
+ [0 3 0 0 0 0 0 0]
+ [0 0 1 0 0 1 0 0]
+ [0 0 0 0 1 0 0 0]
+ [0 0 0 0 0 2 0 0]]
+
+
+================================================================================
+MAGNIFICATION LEVEL: 200X
+================================================================================
+Cohort Split Details: Unique Patients Total = 82 | Train = 57 | Test = 25
+
+--- Classifier: Cosine Similarity ---
+  └─ Binary Accuracy   : 88.00%
+  └─ Subtype Accuracy  : 52.00%
+  └─ Macro Precision   : 0.1542
+  └─ Macro Recall      : 0.1979
+  └─ Macro F1-Score    : 0.1733
+  └─ Patient Confusion Matrix:
+[[ 0  0  1  0  0  0  0  0]
+ [ 0 11  0  1  0  0  0  0]
+ [ 0  0  2  0  0  0  1  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  1  0]
+ [ 0  0  0  0  0  0  0  1]
+ [ 0  0  1  0  0  0  1  0]]
+
+--- Classifier: Logistic Regression ---
+  └─ Binary Accuracy   : 76.00%
+  └─ Subtype Accuracy  : 56.00%
+  └─ Macro Precision   : 0.1548
+  └─ Macro Recall      : 0.2083
+  └─ Macro F1-Score    : 0.1742
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  2  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Linear SVM ---
+  └─ Binary Accuracy   : 72.00%
+  └─ Subtype Accuracy  : 52.00%
+  └─ Macro Precision   : 0.1307
+  └─ Macro Recall      : 0.1667
+  └─ Macro F1-Score    : 0.1382
+  └─ Patient Confusion Matrix:
+[[ 0  1  0  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  2  1  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Small MLP Classifier ---
+  └─ Binary Accuracy   : 80.00%
+  └─ Subtype Accuracy  : 56.00%
+  └─ Macro Precision   : 0.2649
+  └─ Macro Recall      : 0.2396
+  └─ Macro F1-Score    : 0.2474
+  └─ Patient Confusion Matrix:
+[[ 0  0  0  0  0  0  0  1]
+ [ 0 11  0  1  0  0  0  0]
+ [ 0  0  2  0  0  0  0  1]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  0  0  0  1  0  0  1]
+ [ 0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  2  0]]
+
+
+================================================================================
+MAGNIFICATION LEVEL: 400X
+================================================================================
+Cohort Split Details: Unique Patients Total = 82 | Train = 57 | Test = 25
+
+--- Classifier: Cosine Similarity ---
+  └─ Binary Accuracy   : 76.00%
+  └─ Subtype Accuracy  : 48.00%
+  └─ Macro Precision   : 0.1484
+  └─ Macro Recall      : 0.1562
+  └─ Macro F1-Score    : 0.1482
+  └─ Patient Confusion Matrix:
+[[ 0  0  1  0  0  0  0  0]
+ [ 0 11  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  2  1]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  0  2  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Logistic Regression ---
+  └─ Binary Accuracy   : 80.00%
+  └─ Subtype Accuracy  : 52.00%
+  └─ Macro Precision   : 0.1062
+  └─ Macro Recall      : 0.1667
+  └─ Macro F1-Score    : 0.1295
+  └─ Patient Confusion Matrix:
+[[ 0  0  1  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  1  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Linear SVM ---
+  └─ Binary Accuracy   : 84.00%
+  └─ Subtype Accuracy  : 52.00%
+  └─ Macro Precision   : 0.1131
+  └─ Macro Recall      : 0.1667
+  └─ Macro F1-Score    : 0.1326
+  └─ Patient Confusion Matrix:
+[[ 0  0  1  0  0  0  0  0]
+ [ 0 12  0  0  0  0  0  0]
+ [ 0  1  1  0  0  0  1  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  2  0  0  0  0  0  0]]
+
+--- Classifier: Small MLP Classifier ---
+  └─ Binary Accuracy   : 88.00%
+  └─ Subtype Accuracy  : 56.00%
+  └─ Macro Precision   : 0.2768
+  └─ Macro Recall      : 0.2708
+  └─ Macro F1-Score    : 0.2420
+  └─ Patient Confusion Matrix:
+[[ 0  0  0  0  0  0  0  1]
+ [ 0 10  0  0  0  2  0  0]
+ [ 0  0  3  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0]
+ [ 0  2  0  0  1  0  0  0]
+ [ 0  0  1  0  0  0  0  1]
+ [ 0  0  1  0  0  0  0  0]
+ [ 0  1  1  0  0  0  0  0]]
+

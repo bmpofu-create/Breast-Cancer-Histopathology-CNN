@@ -1,0 +1,17 @@
+magnification,classifier,binary_accuracy,subtype_accuracy,macro_precision,macro_recall,macro_f1_score
+40X,Cosine Similarity,88.00,64.00,0.2833,0.2917,0.2562
+40X,Logistic Regression,80.00,60.00,0.3182,0.2708,0.2716
+40X,Linear SVM,76.00,56.00,0.3182,0.2292,0.2341
+40X,Small MLP Classifier,80.00,52.00,0.2059,0.1979,0.1948
+100X,Cosine Similarity,84.00,60.00,0.3984,0.3021,0.3315
+100X,Logistic Regression,84.00,60.00,0.2798,0.2708,0.2576
+100X,Linear SVM,84.00,56.00,0.1515,0.2083,0.1716
+100X,Small MLP Classifier,76.00,44.00,0.1845,0.2292,0.1944
+200X,Cosine Similarity,88.00,52.00,0.1542,0.1979,0.1733
+200X,Logistic Regression,76.00,56.00,0.1548,0.2083,0.1742
+200X,Linear SVM,72.00,52.00,0.1307,0.1667,0.1382
+200X,Small MLP Classifier,80.00,56.00,0.2649,0.2396,0.2474
+400X,Cosine Similarity,76.00,48.00,0.1484,0.1562,0.1482
+400X,Logistic Regression,80.00,52.00,0.1062,0.1667,0.1295
+400X,Linear SVM,84.00,52.00,0.1131,0.1667,0.1326
+400X,Small MLP Classifier,88.00,56.00,0.2768,0.2708,0.2420

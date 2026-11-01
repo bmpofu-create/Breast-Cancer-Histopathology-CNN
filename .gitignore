@@ -1,18 +1,26 @@
-venv/
+# Secrets
+.env
+
+# Python
 __pycache__/
-*.pyc
-
-data/
-models/*.pth
-
-.ipynb_checkpoints/
-
-.DS_Store
-BreaKHis_v1/
-*.png
-*.jpg
-*.jpeg
-*.pth
+*.py[cod]
+.venv/
 venv/
-data/
+
+# Datasets and archives. Download these locally; they are too large for GitHub.
+BreaKHis_v1/
+BRACS_ROI/
+*.zip
+
+# Trained weights and cached embeddings
 models/
+*.pth
+*.npy
+*.npz
+
+# Reference papers kept on this machine only
+*.pdf
+
+# Editor and OS files
+.DS_Store
+.ipynb_checkpoints/

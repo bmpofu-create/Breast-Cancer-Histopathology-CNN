@@ -1,0 +1,167 @@
+======================================================================
+      BREAKHIS MASTER EVALUATION REPORT - PLIP FOUNDATION BACKBONE     
+======================================================================
+
+--- OVERALL EXPERIMENT PERFORMANCE MATRIX ---
++--------------------+-----------------+------------------+
+| Magnification Tier | Binary Accuracy | Subtype Accuracy |
++--------------------+-----------------+------------------+
+| 40X                | 85.39%          | 47.34%           |
+| 100X               | 83.88%          | 39.70%           |
+| 200X               | 84.09%          | 38.96%           |
+| 400X               | 78.14%          | 39.76%           |
++--------------------+-----------------+------------------+
+
+
+======================================================================
+DETAILED METRICS FOR MAGNIFICATION TIER: 40X
+======================================================================
+[Patient-Level Split Info]:
+  Total Unique Patients: 82 | Train Patients: 57 | Test Patients: 25
+  Total Test Frames Evaluated: 657
+
+[Summary Accuracy]:
+  Binary Diagnostic Accuracy: 85.39%
+  Fine Subtype Class Accuracy: 47.34%
+
+[40X] Detailed Binary Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.73      0.82      0.77       196
+   Malignant       0.92      0.87      0.89       461
+
+    accuracy                           0.85       657
+   macro avg       0.82      0.84      0.83       657
+weighted avg       0.86      0.85      0.86       657
+
+[40X] Detailed Subtype Classification Report:
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.35      0.51      0.41        35
+   DUCTAL_CARCINOMA       0.71      0.75      0.73       307
+       FIBROADENOMA       0.26      0.24      0.25        91
+  LOBULAR_CARCINOMA       0.08      0.10      0.09        20
+ MUCINOUS_CARCINOMA       0.41      0.21      0.28        92
+PAPILLARY_CARCINOMA       0.39      0.38      0.39        42
+    PHYLLODES_TUMOR       0.00      0.00      0.00        38
+    TUBULAR_ADENOMA       0.25      0.16      0.19        32
+
+           accuracy                           0.47       657
+          macro avg       0.31      0.29      0.29       657
+       weighted avg       0.48      0.47      0.47       657
+
+
+======================================================================
+DETAILED METRICS FOR MAGNIFICATION TIER: 100X
+======================================================================
+[Patient-Level Split Info]:
+  Total Unique Patients: 82 | Train Patients: 57 | Test Patients: 25
+  Total Test Frames Evaluated: 670
+
+[Summary Accuracy]:
+  Binary Diagnostic Accuracy: 83.88%
+  Fine Subtype Class Accuracy: 39.70%
+
+[100X] Detailed Binary Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.69      0.83      0.75       196
+   Malignant       0.92      0.84      0.88       474
+
+    accuracy                           0.84       670
+   macro avg       0.80      0.84      0.82       670
+weighted avg       0.85      0.84      0.84       670
+
+[100X] Detailed Subtype Classification Report:
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.34      0.53      0.41        36
+   DUCTAL_CARCINOMA       0.67      0.67      0.67       300
+       FIBROADENOMA       0.23      0.24      0.24        86
+  LOBULAR_CARCINOMA       0.05      0.06      0.05        31
+ MUCINOUS_CARCINOMA       0.23      0.12      0.16       105
+PAPILLARY_CARCINOMA       0.11      0.11      0.11        38
+    PHYLLODES_TUMOR       0.00      0.00      0.00        39
+    TUBULAR_ADENOMA       0.39      0.20      0.26        35
+
+           accuracy                           0.40       670
+          macro avg       0.25      0.24      0.24       670
+       weighted avg       0.41      0.40      0.40       670
+
+
+======================================================================
+DETAILED METRICS FOR MAGNIFICATION TIER: 200X
+======================================================================
+[Patient-Level Split Info]:
+  Total Unique Patients: 82 | Train Patients: 57 | Test Patients: 25
+  Total Test Frames Evaluated: 616
+
+[Summary Accuracy]:
+  Binary Diagnostic Accuracy: 84.09%
+  Fine Subtype Class Accuracy: 38.96%
+
+[200X] Detailed Binary Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.69      0.86      0.77       190
+   Malignant       0.93      0.83      0.88       426
+
+    accuracy                           0.84       616
+   macro avg       0.81      0.85      0.82       616
+weighted avg       0.86      0.84      0.84       616
+
+[200X] Detailed Subtype Classification Report:
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.36      0.52      0.42        31
+   DUCTAL_CARCINOMA       0.67      0.67      0.67       276
+       FIBROADENOMA       0.22      0.26      0.24        84
+  LOBULAR_CARCINOMA       0.00      0.00      0.00        28
+ MUCINOUS_CARCINOMA       0.21      0.09      0.13        86
+PAPILLARY_CARCINOMA       0.04      0.03      0.03        36
+    PHYLLODES_TUMOR       0.00      0.00      0.00        42
+    TUBULAR_ADENOMA       0.47      0.24      0.32        33
+
+           accuracy                           0.39       616
+          macro avg       0.25      0.23      0.23       616
+       weighted avg       0.40      0.39      0.39       616
+
+
+======================================================================
+DETAILED METRICS FOR MAGNIFICATION TIER: 400X
+======================================================================
+[Patient-Level Split Info]:
+  Total Unique Patients: 82 | Train Patients: 57 | Test Patients: 25
+  Total Test Frames Evaluated: 581
+
+[Summary Accuracy]:
+  Binary Diagnostic Accuracy: 78.14%
+  Fine Subtype Class Accuracy: 39.76%
+
+[400X] Detailed Binary Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.62      0.72      0.67       178
+   Malignant       0.87      0.81      0.84       403
+
+    accuracy                           0.78       581
+   macro avg       0.75      0.77      0.75       581
+weighted avg       0.79      0.78      0.79       581
+
+[400X] Detailed Subtype Classification Report:
+                     precision    recall  f1-score   support
+
+           ADENOSIS       0.29      0.40      0.33        30
+   DUCTAL_CARCINOMA       0.66      0.69      0.67       264
+       FIBROADENOMA       0.20      0.15      0.17        78
+  LOBULAR_CARCINOMA       0.02      0.04      0.03        24
+ MUCINOUS_CARCINOMA       0.32      0.11      0.16        76
+PAPILLARY_CARCINOMA       0.27      0.21      0.23        39
+    PHYLLODES_TUMOR       0.01      0.03      0.02        39
+    TUBULAR_ADENOMA       0.21      0.23      0.22        31
+
+           accuracy                           0.40       581
+          macro avg       0.25      0.23      0.23       581
+       weighted avg       0.41      0.40      0.40       581
+
+
