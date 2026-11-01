@@ -2,7 +2,7 @@
 
 Patient-separated experiments on BreaKHis and BRACS, plus a small app that classifies one region into the seven BRACS subtypes.
 
-The datasets and trained weights are not in this repository. Download them separately and keep them in the folders named below.
+The datasets and trained weights are not in the git history. Download the weights from the release below, and keep the image folders next to the code.
 
 ## Layout
 
@@ -29,6 +29,18 @@ On the seven-subtype task, the PLIP adapter separated these three classes best:
 | Ductal carcinoma in situ | 0.73 |
 
 That run is `experiments/05_bracs_7class`. Its patient-isolated accuracy was 65.19%, ahead of cosine nearest-neighbor at 55.31%.
+
+## Trained weights
+
+The Streamlit app loads the adapter from `models/`. Download the release and place the files in that folder:
+
+https://github.com/bmpofu-create/Breast-Cancer-Histopathology-CNN/releases/tag/weights-v1
+
+Or train the adapter again:
+
+```bash
+python src/multiclass_classify.py --train
+```
 
 ## Data
 
